@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import Nav from '@components/Nav';
-import ChooseAlexLocation from '@components/ChooseAlexLocation';
-import PageHeader from '@components/PageHeader';
 import Button from '@components/Button';
+import ChooseAlexLocation from '@components/ChooseAlexLocation';
+import Nav from '@components/Nav';
+import PageHeader from '@components/PageHeader';
 import { Answer } from '@state/RecordTypes/wheres_alex_vxxx';
 import { Step, useNewGameStore } from './store';
 
@@ -18,7 +18,7 @@ function HideAlex() {
       <div className='flex h-full w-full flex-col items-center gap-2 px-5'>
         <Nav step={2} />
         <PageHeader
-          text='WHERE WOULD YOU LIKE TO HIDE ALEX?'
+          text='WHERE WOULD YOU LIKE TO HIDE BABYCAT?'
           bg='bg-primary-blue'
         />
         <ChooseAlexLocation

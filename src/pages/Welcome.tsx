@@ -1,10 +1,10 @@
-import { useConnect, useAccount } from '@puzzlehq/sdk';
+import Button from '@components/Button.js';
+import { useAccount, useConnect } from '@puzzlehq/sdk';
+import { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import rightImageSrc from '../assets/alex_mic_left_tilt.png';
 import leftImageSrc from '../assets/alex_mic_right_tilt.png';
 import bottomImageSrc from '../assets/alexbottom.png';
-import { useNavigate } from 'react-router-dom';
-import { useEffect } from 'react';
-import Button from '@components/Button.js';
 
 export const Welcome = () => {
   const navigate = useNavigate();
@@ -33,7 +33,7 @@ export const Welcome = () => {
         <h1 className='text-24xl z-10 max-w-full overflow-visible whitespace-nowrap text-center font-extrabold leading-[40.56px] tracking-tight text-primary-white'>
           WHERE'S
           <br />
-          ALEX?
+          BABYCAT?
         </h1>
         <p className='z-10 mb-8 mt-8 max-w-[400px] text-center text-base font-bold tracking-tight text-primary-white'>
           A thrilling game showcasing the power of Aleo and the Puzzle

@@ -1,15 +1,17 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import PageHeader from '@components/PageHeader';
-import Nav from '@components/Nav';
-import ChooseAlexLocation from '@components/ChooseAlexLocation';
 import Button from '@components/Button';
+import ChooseAlexLocation from '@components/ChooseAlexLocation';
+import Nav from '@components/Nav';
+import PageHeader from '@components/PageHeader';
+import { useEventHandling } from '@hooks/eventHandling.js';
+import { useMsRecords } from '@hooks/msRecords.js';
 import {
-  requestCreateEvent,
-  EventType,
   EventStatus,
-  useBalance,
-  shortenAddress,
+  EventType,
+  requestCreateEvent
 } from '@puzzlehq/sdk';
+import { Answer } from '@state/RecordTypes/wheres_alex_vxxx.js';
+import { useGameStore } from '@state/gameStore.js';
 import {
   AcceptGameInputs,
   GAME_FUNCTIONS,
@@ -17,12 +19,8 @@ import {
   transitionFees,
 } from '@state/manager.js';
 import { useEffect, useState } from 'react';
-import { Answer } from '@state/RecordTypes/wheres_alex_vxxx.js';
-import { Step, useAcceptGameStore } from './store.js';
-import { useGameStore } from '@state/gameStore.js';
-import { useMsRecords } from '@hooks/msRecords.js';
-import { useEventHandling } from '@hooks/eventHandling.js';
 import { useSearchParams } from 'react-router-dom';
+import { Step, useAcceptGameStore } from './store.js';
 
 function AcceptGame() {
   const [
@@ -204,7 +202,7 @@ function AcceptGame() {
       <div className='flex h-full w-full flex-col items-center gap-6 px-5'>
         <div className='flex w-full flex-col gap-2'>
           <Nav step={2} isChallenger={false} />
-          <PageHeader bg='bg-primary-blue' text='FIND ALEX' />
+          <PageHeader bg='bg-primary-blue' text='FIND BABYCAT' />
         </div>
         <ChooseAlexLocation
           setAnswer={(answer) => {

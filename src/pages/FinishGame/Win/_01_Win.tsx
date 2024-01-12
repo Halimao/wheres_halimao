@@ -1,17 +1,9 @@
+import Button from '@components/Button';
 import PageHeader from '@components/PageHeader';
 import SelectedAlexLocation from '@components/SelectedAlexLocation';
 import Wager from '@components/Wager';
-import Button from '@components/Button';
-import { useGameStore } from '@state/gameStore';
-import { getAnswer } from '@state/RecordTypes/wheres_alex_vxxx';
-import {
-  GAME_FUNCTIONS,
-  GAME_PROGRAM_ID,
-  transitionFees,
-} from '@state/manager';
-import { Step, useClaimPrizeWinStore } from './store';
-import { useNavigate, useSearchParams } from 'react-router-dom';
-import { useEffect, useState } from 'react';
+import { useEventHandling } from '@hooks/eventHandling';
+import { useMsRecords } from '@hooks/msRecords';
 import {
   EventStatus,
   EventType,
@@ -19,8 +11,16 @@ import {
   shortenAddress,
   useBalance,
 } from '@puzzlehq/sdk';
-import { useMsRecords } from '@hooks/msRecords';
-import { useEventHandling } from '@hooks/eventHandling';
+import { getAnswer } from '@state/RecordTypes/wheres_alex_vxxx';
+import { useGameStore } from '@state/gameStore';
+import {
+  GAME_FUNCTIONS,
+  GAME_PROGRAM_ID,
+  transitionFees,
+} from '@state/manager';
+import { useEffect, useState } from 'react';
+import { useNavigate, useSearchParams } from 'react-router-dom';
+import { Step, useClaimPrizeWinStore } from './store';
 
 const Win = () => {
   const [inputs, eventId, setEventId, initialize, setStep] =
@@ -162,7 +162,7 @@ const Win = () => {
 
   return (
     <div className='flex h-full w-full flex-col justify-center gap-4'>
-      <PageHeader text="WHERE'S ALEX" bg='bg-primary-blue' />
+      <PageHeader text="WHERE'S BABYCAT" bg='bg-primary-blue' />
       <Wager wagerAmount={wager} winnings />
       <div className='flex flex-col gap-2'>
         <SelectedAlexLocation

@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
+import Button from '@components/Button';
 import Nav from '@components/Nav';
 import PageHeader from '@components/PageHeader';
-import Button from '@components/Button';
 import { useGameStore } from '@state/gameStore';
 import { useMemo, useState } from 'react';
 import { Step, useNewGameStore } from './store';
@@ -25,7 +25,7 @@ function StartWager() {
     if (isNaN(input)) {
       setError('Please input a number');
     } else if (input > availableBalance) {
-      setError('You do not have enough Prudens');
+      setError('You do not have enough Halimao');
     } else {
       setError(undefined);
       setInputs({
@@ -67,7 +67,7 @@ function StartWager() {
         placeholder='Enter amount'
       />
       <p className='mx-auto mt-6'>
-        {'Available balance: ' + availableBalance} Prudens
+        {'Available balance: ' + availableBalance} Halimao
       </p>
       {error && <p className='mx-auto text-primary-red'>{error}</p>}
       <div className='flex flex-grow flex-col' />

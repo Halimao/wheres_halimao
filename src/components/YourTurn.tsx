@@ -1,11 +1,11 @@
-import { useNavigate } from 'react-router-dom';
-import Button from './Button.js';
-import { Game, useGameStore } from '@state/gameStore.js';
 import { shortenAddress } from '@puzzlehq/sdk';
+import { Game, useGameStore } from '@state/gameStore.js';
+import { useNavigate } from 'react-router-dom';
 import {
   AcceptGameButton,
   SubmitWagerButton,
 } from '../pages/AcceptGame/index.js';
+import Button from './Button.js';
 
 function YourTurnItem({ game }: { game: Game }) {
   const user = game.gameNotification.recordData.owner;
@@ -78,7 +78,7 @@ function YourTurnItem({ game }: { game: Game }) {
         {shortenAddress(vs)}
       </div>
       <div className='my-auto self-center text-left text-xs font-bold tracking-tight text-primary-pink max-sm:ml-2'>
-        {wager} prudens
+        {wager} halimao
       </div>
       <div className='flex justify-end'>{renderActionButton()}</div>
     </div>

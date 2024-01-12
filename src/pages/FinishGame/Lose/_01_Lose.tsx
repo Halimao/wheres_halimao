@@ -1,12 +1,12 @@
+import Button from '@components/Button';
 import PageHeader from '@components/PageHeader';
 import SelectedAlexLocation from '@components/SelectedAlexLocation';
 import Wager from '@components/Wager';
-import Button from '@components/Button';
-import { useNavigate } from 'react-router-dom';
-import { useGameStore } from '@state/gameStore';
-import { getAnswer } from '@state/RecordTypes/wheres_alex_vxxx';
-import { shortenAddress } from '@puzzlehq/sdk';
 import { useInitCurrentGame } from '@hooks/currentGame';
+import { shortenAddress } from '@puzzlehq/sdk';
+import { getAnswer } from '@state/RecordTypes/wheres_alex_vxxx';
+import { useGameStore } from '@state/gameStore';
+import { useNavigate } from 'react-router-dom';
 
 const Lose = () => {
   useInitCurrentGame();
@@ -40,7 +40,7 @@ const Lose = () => {
 
   return (
     <div className='flex h-full w-full flex-col justify-center gap-4'>
-      <PageHeader text="WHERE'S ALEX" bg='bg-primary-blue' />
+      <PageHeader text="WHERE'S BABYCAT" bg='bg-primary-blue' />
       <Wager wagerAmount={wager} winnings />
       <div className='flex flex-col gap-2'>
         {challenger_answer && (
